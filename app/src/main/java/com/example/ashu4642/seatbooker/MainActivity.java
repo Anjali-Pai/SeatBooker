@@ -7,16 +7,13 @@ import android.view.MenuItem;
 
 import com.example.tonyt.seatbooker.R;
 
-
 public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.println("This doesn't work");
-    }
-
+           }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
