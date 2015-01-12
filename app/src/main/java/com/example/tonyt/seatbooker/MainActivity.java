@@ -1,11 +1,10 @@
-package com.example.ashu4642.seatbooker;
+package com.example.tonyt.seatbooker;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.tonyt.seatbooker.R;
 
 public class MainActivity extends Activity {
 
@@ -13,8 +12,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.out.print("ASHU is not here");
-           }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
