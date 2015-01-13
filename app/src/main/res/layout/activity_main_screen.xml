@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_content"sdlfkd
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/favorite_layout"
@@ -61,7 +61,7 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:text="Top Cuisine in the country"
-                    android:background="@drawable/Top10"
+                    android:background="@drawable/top10"
                     />
                 <Button
                     android:id="@+id/search_by_name"
