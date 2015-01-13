@@ -1,9 +1,13 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
     <RelativeLayout
-        android:layout_width="wrap_content"sdlfkd
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/favorite_layout"
@@ -12,62 +16,103 @@
             <Button
                     android:id="@+id/favorite"
                     android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_height="178dp"
                     android:background="@drawable/favorite"
                 />
         </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Favorite"
-                android:id="@+id/favorite_text"
-                android:layout_alignBottom="@+id/favorite_layout"
-                />
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/location_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <Button
-                    android:id="@+id/find_by_location"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:text=""
-                    android:background="@drawable/find_by_location"
-                    />
-            </LinearLayout>
-    </RelativeLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Find By Location"
-            android:id="@+id/find_by_location_text"
-            android:layout_marginBottom="@+id/location_layout"
-            />
+
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_weight="1"
             android:weightSum="1">
-                <Button
-                    android:id="@+id/Top_Cuisine_in_the_country"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:text="Top Cuisine in the country"
-                    android:background="@drawable/top10"
-                    />
-                <Button
-                    android:id="@+id/search_by_name"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:text="Search by Name"
-                     />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/top_layout"
+                    >
+
+                </LinearLayout>
+
+            </RelativeLayout>
         </LinearLayout>
-</LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Find By Location"
+        android:id="@+id/find_by_location_text"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/find_by_location"
+        android:layout_alignStart="@+id/find_by_location" />
+
+    <Button
+        android:id="@+id/Top_Cuisine_in_the_country"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/top10"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/find_by_location_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Top Cuisine in the Country"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Top_Cuisine_in_the_country_text"
+        android:layout_below="@+id/Top_Cuisine_in_the_country"
+        android:layout_toLeftOf="@+id/search_by_name"
+        android:layout_toStartOf="@+id/search_by_name" />
+
+    <Button
+        android:id="@+id/search_by_name"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:background="@drawable/search"
+        android:layout_above="@+id/Top_Cuisine_in_the_country_text"
+        android:layout_toRightOf="@+id/Top_Cuisine_in_the_country"
+        android:layout_toEndOf="@+id/Top_Cuisine_in_the_country"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search By Name"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/Top_Cuisine_in_the_country_text"
+        android:layout_alignLeft="@+id/search_by_name"
+        android:layout_alignStart="@+id/search_by_name" />
+
+    <Button
+        android:id="@+id/find_by_location"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:text=""
+        android:background="@drawable/find_by_location"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/search_by_name"
+        android:layout_alignStart="@+id/search_by_name"
+        android:layout_alignBottom="@+id/linearLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Favorite"
+        android:id="@+id/favorite_text"
+        android:layout_alignBottom="@+id/find_by_location"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
