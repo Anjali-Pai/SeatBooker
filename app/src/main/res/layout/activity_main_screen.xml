@@ -22,14 +22,7 @@
         </LinearLayout>
 
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/location_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></LinearLayout>
-    </RelativeLayout>
+
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -47,9 +40,6 @@
                     >
 
                 </LinearLayout>
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></RelativeLayout>
 
             </RelativeLayout>
         </LinearLayout>
@@ -89,7 +79,7 @@
         android:id="@+id/search_by_name"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:text="Search by Name"
+
         android:background="@drawable/search"
         android:layout_above="@+id/Top_Cuisine_in_the_country_text"
         android:layout_toRightOf="@+id/Top_Cuisine_in_the_country"
@@ -100,7 +90,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search By Name"
-        />
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/Top_Cuisine_in_the_country_text"
+        android:layout_alignLeft="@+id/search_by_name"
+        android:layout_alignStart="@+id/search_by_name" />
 
     <Button
         android:id="@+id/find_by_location"
@@ -108,9 +101,10 @@
         android:layout_height="150dp"
         android:text=""
         android:background="@drawable/find_by_location"
-        android:layout_above="@+id/find_by_location_text"
+        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/search_by_name"
-        android:layout_alignStart="@+id/search_by_name" />
+        android:layout_alignStart="@+id/search_by_name"
+        android:layout_alignBottom="@+id/linearLayout" />
 
     <TextView
         android:layout_width="wrap_content"
