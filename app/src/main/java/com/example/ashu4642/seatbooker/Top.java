@@ -26,12 +26,11 @@ private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top);
-        button = (Button) findViewById(R.id.Top_Cuisine_in_the_county);
+              button = (Button) findViewById(R.id.Top_Cuisine_in_the_county);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (v.getId() == R.id.Top_Cuisine_in_the_county) {
+               setContentView(R.layout.activity_top);
                     AlertDialog.Builder builder = new AlertDialog.Builder(context);
                     builder.setTitle("Choose Cuisine");
 
