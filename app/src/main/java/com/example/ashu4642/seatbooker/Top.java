@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ashu4642.SeatBooker.R;
+import com.example.tonyt.seatbooker.R;
 
 
 public class Top extends ActionBarActivity {
@@ -20,12 +20,12 @@ private Button button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top);
-        button =(Button)findViewById(R.id.Top_Cuisine_in_the_county);
+        button =(Button)findViewById(R.id.Top_Cuisine_in_the_country);
         button.setOnClickListener((android.view.View.OnClickListener) this);
     }
 
     public void onClick(View view) {
-        if (view.getId() == R.id.Top_Cuisine_in_the_county) {
+        if (view.getId() == R.id.Top_Cuisine_in_the_country) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Choose Cuisine");
 
