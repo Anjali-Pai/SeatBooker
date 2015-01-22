@@ -8,13 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.ashu4642.SeatBooker.R;
 
 
 public class Name extends ActionBarActivity {
 private Button button;
-    private String name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,22 +23,31 @@ private Button button;
         setContentView(R.layout.activity_name);
         button=(Button)findViewById(R.id.search_by_name);
         button.setOnClickListener((android.view.View.OnClickListener) this);
-
-
     }
-    @Override
+
     public void onClick(View view) {
-        if (view.getId() == R.id.button) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Enter Restaurant Name");
-            builder.setSingleChoiceItems("Search", 0, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                    startPlay(which);
+        if (view.getId() == R.id.search_by_name) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+            alert.setTitle("Enter Restaurant Name");
+            alert.setMessage("");
+
+            final EditText input = new EditText(this);
+            alert.setView(input);
+            alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                   String name = input.getText().toString();
+
                 }
             });
-            AlertDialog ad = builder.create();
-            ad.show();
+
+            alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+
+                }
+            });
+
+            alert.show();
         }
     }
     @Override
