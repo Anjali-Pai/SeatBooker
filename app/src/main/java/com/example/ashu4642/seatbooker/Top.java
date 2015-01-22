@@ -2,6 +2,7 @@ package com.example.ashu4642.seatbooker;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class Top extends ListActivity {
 private Button button;
+    private Context context;
     private int cuisine;
     private String[] levelNames = {"All", "Italian", "Mexican", "Indian", "Chinese"};
     List<String> list = new ArrayList<String>();
@@ -25,35 +27,40 @@ private Button button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top);
-        button =(Button)findViewById(R.id.Top_Cuisine_in_the_county);
-        button.setOnClickListener((android.view.View.OnClickListener) this);
+        button = (Button) findViewById(R.id.Top_Cuisine_in_the_county);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.Top_Cuisine_in_the_county) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                    builder.setTitle("Choose Cuisine");
+
+
+                    builder.setSingleChoiceItems(levelNames, 0, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                            display(which);
+
+                        }
+                    });
+                    AlertDialog ad = builder.create();
+                    ad.show();
+
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+
+                        }
+                    });
+
+                    builder.show();
+                }
+            }
+        });
     }
 
-    public void onClick(View view) {
-        if (view.getId() == R.id.Top_Cuisine_in_the_county) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Choose Cuisine");
 
 
-            builder.setSingleChoiceItems(levelNames, 0, new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                    display(which);
 
-                }
-            });
-            AlertDialog ad = builder.create();
-            ad.show();
-
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int whichButton) {
-
-                }
-            });
-
-            builder.show();
-        }
-    }
 
 public void display(Integer i) {
 if(i==1);
