@@ -1,21 +1,26 @@
 package com.example.ashu4642.seatbooker;
 
 import android.app.AlertDialog;
+import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 
 import com.example.ashu4642.SeatBooker.R;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class Top extends ActionBarActivity {
+
+public class Top extends ListActivity {
 private Button button;
     private int cuisine;
-    private String[] levelNames = {"American", "Italian", "Mexican", "French", "Indian", "Chinese"};
+    private String[] levelNames = {"All", "Italian", "Mexican", "Indian", "Chinese"};
+    List<String> list = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +56,78 @@ private Button button;
     }
 
 public void display(Integer i) {
+if(i==1);
+    {
+        list.add("Seaside Thai and French Cuisine");
+        list.add("The New Yarmouth Restaurant");
+        list.add("The Breakfast Shoppe");
+        list.add("Don Lobos Mexican Grill");
+        list.add("Liv2eat Restaurant");
+        list.add("Dessert Fantasies");
+        list.add("Dumfries Cafe");
+        list.add("My Deli & Cafe Greek Bistro");
+        list.add("K Town Bistro");
+        list.add("Louisiana Restaurant");
 
-}
+    }
+    if(i==2);
+    {
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+    }
+    if(i==3);
+    {
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+    }
+    if(i==4);
+    {
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+    }
+    if(i==5);
+    {
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+        list.add("The Breakfast Shoppe");
+    }
+    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+            R.layout.activity_top, list);
+    setListAdapter(adapter);
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
