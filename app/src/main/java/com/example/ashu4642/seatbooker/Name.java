@@ -1,19 +1,19 @@
 package com.example.ashu4642.seatbooker;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.ashu4642.SeatBooker.R;
+import com.example.tonyt.seatbooker.R;
 
-
-public class Name extends ActionBarActivity {
+//import com.example.tonyt.seatbooker.R;
+public class Name extends Activity {
 private Button button;
 
 
@@ -53,7 +53,7 @@ private Button button;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_name, menu);
+        getMenuInflater().inflate(R.menu.menu_name,menu);
         return true;
     }
 
